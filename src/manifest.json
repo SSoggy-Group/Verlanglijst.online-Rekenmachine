@@ -1,10 +1,16 @@
 {
   "manifest_version": 3,
   "name": "Live List Total",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Shows a live-updating total of all product prices",
   "permissions": ["storage"],
   "action": {
     "default_popup": "popup.html"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://verlanglijst.online/mijnlijstjes*"],
+      "js": ["js/content.js"]
+    }
+  ]
 }
